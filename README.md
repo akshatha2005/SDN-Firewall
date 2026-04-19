@@ -132,7 +132,7 @@ Network Started - Firewall Active
 
 ---
 
-## 🧪 Test Results
+##  Test Results
 
 ### Test Case 1: Blocked Traffic (h1 → h2)
 
@@ -149,14 +149,14 @@ PING 10.0.0.2 (10.0.0.2) 56(84) bytes of data.
 3 packets transmitted, 0 received, 100% packet loss, time 2089ms
 ```
 
-**Status:** ✅ **PASS** - Traffic successfully blocked
+**Status:**  **PASS** - Traffic successfully blocked
 
 ![Blocked Traffic Test](screenshots/blocked_test.jpeg)
 
 **Controller Log:**
 ```
 WARNING:firewall:BLOCKED: 10.0.0.1 -> 10.0.0.2 | Reason: Block h1 to h2
-[FIREWALL] ❌ BLOCKED: 10.0.0.1 -> 10.0.0.2
+[FIREWALL]  BLOCKED: 10.0.0.1 -> 10.0.0.2
 ```
 
 ---
@@ -180,7 +180,7 @@ PING 10.0.0.3 (10.0.0.3) 56(84) bytes of data.
 rtt min/avg/max/mdev = 8.394/10.824/13.267/1.989 ms
 ```
 
-**Status:** ✅ **PASS** - Traffic successfully allowed
+**Status:** **PASS** - Traffic successfully allowed
 
 ![Allowed Traffic Test](screenshots/allowed_test.jpeg)
 
@@ -208,15 +208,15 @@ h3 -> h1 h2
 *** Results: 33% dropped (4/6 received)
 ```
 
-**Status:** ✅ **PASS** - Correct selective blocking
+**Status:**  **PASS** - Correct selective blocking
 
 ![Pingall Results](screenshots/pingall.jpeg)
 
 **Analysis:**
-- h1 → h2: ❌ Blocked (as configured)
-- h1 → h3: ✅ Allowed
-- h2 → h3: ✅ Allowed
-- Reverse traffic: ✅ Allowed
+- h1 → h2:  Blocked (as configured)
+- h1 → h3:  Allowed
+- h2 → h3:  Allowed
+- Reverse traffic:  Allowed
 
 ---
 
@@ -240,11 +240,11 @@ Sun Apr 19 04:44:47 2026 | ALLOWED: 10.0.0.2 -> 10.0.0.3
 
 ![Firewall Logs](screenshots/logs.jpeg)
 
-**Status:** ✅ **PASS** - All events logged correctly
+**Status:**  **PASS** - All events logged correctly
 
 ---
 
-## 📊 Wireshark Analysis
+##  Wireshark Analysis
 
 ### Blocked Traffic Capture (h1 → h2)
 
@@ -302,7 +302,7 @@ Internet Control Message Protocol
 
 ---
 
-## 📈 Performance Metrics
+##  Performance Metrics
 
 ### Measured Performance
 
